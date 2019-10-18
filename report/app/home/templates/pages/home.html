@@ -1,0 +1,45 @@
+{% extends "pages/main.html" %}
+
+{% block title %}Trang chủ{% endblock %}
+{% block style %}
+{% load static %}
+<link href="{% static 'css/upload-image.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-sm-3">
+    <div id="msg"></div>
+    <form method="post" id="image-form">
+      <input type="file" name="img[]" class="file" accept="image/*">
+      <div class="input-group my-3">
+        <input type="text" class="form-control" disabled placeholder="Upload File" id="file">
+        <div class="input-group-append">
+          <button type="button" class="browse btn btn-primary">Browse...</button>
+        </div>
+      </div>
+    </form>
+    <div>
+      <img src="https://ssr-releases-cdn.paperlesspost.com/_next/static/images/DesignYourOwnMobilePoster-7d2c137694cd2f099ada08ab87a663d8.jpg" id="preview" class="img-thumbnail">
+    </div>
+    <button type="button" class="btn btn-primary w-100"> Search</button>
+  </div>
+
+  <div class="col-sm-9">
+    <div class="center">
+      <img class="m-2" height="200px;" src="https://i.pinimg.com/564x/a1/13/ef/a113ef1dfb662badd29a55fb6c899f3e.jpg" >
+      <img class="m-2" height="200px;" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/%E7%8E%8B%E4%B8%80%E5%8D%9A.jpg">
+      <img class="m-2" height="200px;" src="https://2sao.vietnamnetjsc.vn/images/2019/09/28/00/34/vuong-nhat-bac-9.jpg">
+      <img class="m-2" height="200px;" src="https://media.ex-cdn.com/EXP/media.giadinhmoi.vn/files/content/2019/08/03/vuong-nhat-bac-07-2235.jpg">
+      <img class="m-2" height="200px;" src="https://photo-2-baomoi.zadn.vn/w700_r1/2019_10_12_329_32536183/bbc8b1e402a4ebfab2b5.jpg">
+      <img class="m-2" height="200px;" src="https://photo-1-baomoi.zadn.vn/w1000_r1/2019_02_16_329_29678358/4f3b7240b801515f0810.jpg">
+      <img class="m-2" height="200px;" src="http://mcvideo.imgvip.keeng.net:8088/phimonbox/images/20190812/5b0314611493468392a6869aeb897d2f.jpg">
+      <img class="m-2" height="200px;" src="https://image2.tin247.com/pictures/2019/08/08/nku1565236386.jpg">
+      <img class="m-2" height="200px;" src="https://ss-images.catscdn.vn/w500/2019/09/21/6087205/untitled-3.jpg">
+      <img class="m-2" height="200px;" src="https://ss-images.catscdn.vn/w500/2019/10/13/6233174/untitled-11.jpg">
+      <!-- <img class="m-2" height="300px;" src=""> -->
+    </div>
+  </div>
+</div>
+<script src="{% static 'js/upload-image.js' %}"></script>
+   
+{% endblock %}
